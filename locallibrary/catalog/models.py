@@ -55,7 +55,7 @@ class BookInstance(models.Model):
     	blank=True,default='m',
     	help_text='Book availability',)
 
-    borrower = models.ForeignKey(User, on_delete.SET_NULL, null=True, blank=True)
+    borrower = models.ForeignKey(User, on_delete= models.SET_NULL, null=True, blank=True)
 
     def is_overdue(self):
 
